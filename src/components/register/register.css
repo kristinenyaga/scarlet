@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+.register-form {
+  max-width: 450px;
+  margin:0 auto;
+  justify-content: center;
+  /* align-items: center; */
+  vertical-align: middle;
+  border: none;
+  padding: 4%;
+  margin-top: 9em;
+  
+}
+.register-form-forgot {
+  float: right;
+  padding: 1em;
+}
+.ant-col-rtl .register-form-forgot {
+  float: left;
+}
+.register-form-button {
+  width: 100%;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  /* background-color: lightcoral; */
+  font-size: 18px;
+  padding: 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+#normal_login_username,
+#normal_login_password{
+  outline: 0;
+  border: none;
+  padding:10px;
+  margin:10px 0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  width: 80%;
+  font-size: 15px;
+}
+
+.flex-direction-parent{
+  display:flex;
+  flex-direction: row;
+  width: 500px;
+  gap: 50em;
+  padding: 3%;
+}
+.text-wrap {
+  word-wrap: break-word;
+}
+
+.book-list {
+  overflow-x: scroll;
+  min-height: 500px;
+  max-width: 100%;
+  
+}
+
+
+.register-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 88%;
+  padding: 20px ;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.register-box h2 {
+  /* margin: 0 0 30px; */
+  padding: 0;
+  color:lightcoral;
+  text-align: center;
+  font-family:monospace;
+
+}
+
+.register-box .user-box {
+  position: relative;
+}
+.register-box .user-box ::placeholder{
+  color:lightcoral;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.btn-dark{
+  background-color: lightcoral;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.register-box .user-box input {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid lightcoral;
+  outline: none;
+  background: transparent;
+}
+.register-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  /* color: #fff; */
+  pointer-events: none;
+  transition: .5s;
+}
+
+.register-box .user-box input:focus ~ label,
+.register-box .user-box input:valid ~ label {
+  /* top: -20px; */
+  left: 0;
+  /* color: #03e9f4; */
+  font-size: 12px;
+}
+
+
+.signTitle{
+  color: lightcoral;
+  font-family: 'Nerko One', cursive;
+  font-size: 46px;
+}

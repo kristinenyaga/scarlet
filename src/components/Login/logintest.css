@@ -1,0 +1,54 @@
+
+.loginTest{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.btnflex{
+  display: flex;
+  margin-right: 340px;
+  
+}
+.loginImg{
+  max-width: 100vh;
+  max-height: 200vh;
+  margin-top: 5em;
+
+}
+.loginTitle{
+  
+  color: lightcoral;
+  font-family: 'Nerko One', cursive;
+  font-size: 46px;
+}
+
+.loginbtn{
+  width: 150px;
+  background-color: lightcoral;
+}
+
+.loginForm{
+  margin-left: 150px;
+  margin-top: 3em;
+  padding: -20em;
+  
+
+}
+
+input.password {
+  width: 100%;
+  }
+  input.email {
+    width: 100%;
+    }
+.loginNews{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  color: lightcoral;
+  font-family: 'Nerko One', cursive;
+  font-size: 50px;
+  letter-spacing: 2px;
+}    

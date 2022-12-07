@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@300&family=Montserrat&family=Nerko+One&family=Noto+Serif+Display:ital,wght@0,400;0,500;0,700;1,300&family=Poppins:ital,wght@0,300;0,400;0,600;1,300&family=Sanchez&family=Sarala&family=Satisfy&display=swap');
+
+  .write{
+    margin-top: 80px;
+    padding: 5%;
+    height: 500px;
+  }
+  body, input, select,textarea { 
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: 'Sarala', sans-serif;
+  font-size: 22px;
+  
+  }
+ .write h1{
+  font-weight: 400;
+  color: lightcoral;
+  font-family: 'Nerko One', cursive;
+  font-size: 42px;
+  
+ }
+
+
+
+  .main-block, .info {
+  display: flex;
+  flex-direction: column;
+  }
+  .main-block {
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  min-height: 100%;
+  background: url("https://cdn.pixabay.com/photo/2018/09/16/00/27/magazine-3680550_960_720.jpg") no-repeat center;
+  background-size: cover;
+  }
+  form {
+  width: 80%; 
+  padding: 25px;
+  font-size: 54px;
+  margin-bottom: 20px;
+  }
+  input, select {
+  /* padding: 5px; */
+  margin-bottom: 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #eee;
+  }
+  input::placeholder {
+  color: lightcoral;
+  }
+  option {
+  background: rgb(246, 243, 243); 
+  border: none;
+  }
+ 
+
+ 
+  input[type=radio]:checked + label:after {
+  opacity: 1;
+  }
+  button {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 5px; 
+  background:lightcoral; 
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  }
+  button:hover {
+  background: lightpink;
+  }
+  @media (min-width: 568px) {
+  .info {
+  flex-flow: row wrap;
+  justify-content: space-between;
+  }
+  input {
+  width: 46%;
+  }
+  input.fname {
+  width: 100%;
+  }
+  input.email {
+    width: 100%;
+    }
+  select {
+  width: 48%;
+  }
+  }
+
+
+textarea {
+  color: inherit;  
+  height: 300px;
+  width: 50%;
+  border: none;
+}

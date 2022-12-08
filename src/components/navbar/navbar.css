@@ -22,3 +22,10 @@
   gap: 30em;
   
 }
+
+.logoutBtn{
+  width: 130px;
+  height: 40px;
+  margin-top: 7px;
+  padding: -10%;
+}

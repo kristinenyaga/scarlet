@@ -6,9 +6,33 @@ export default function AddNews({user}){
   const [content, setContent] = useState("");
   const [image_url, setImage_Url] = useState("");
   const [title, setTitle] = useState("");
+  const userId = user.id
 
-  function handleSubmit(){
-    console.log(rating);
+  function handleSubmit(e) {
+   
+    e.preventDefault();
+    fetch("/articles", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        category,
+        rating,
+        image_url:image_url,
+        content,
+        title,
+        user_id:userId
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((article) => {
+          console.log(article)
+        });
+      } else {
+        r.json().then((err) => alert(err.errors));
+      }
+    });
   }
 
   return(

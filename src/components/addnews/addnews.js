@@ -28,11 +28,20 @@ export default function AddNews({user}){
       if (r.ok) {
         r.json().then((article) => {
           console.log(article)
+          clearData()
         });
       } else {
         r.json().then((err) => alert(err.errors));
       }
     });
+  }
+
+  function clearData(){
+    setCategory("")
+    setRating("")
+    setContent("")
+    setImage_Url("")
+    setTitle("")
   }
 
   return(

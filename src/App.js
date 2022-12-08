@@ -28,7 +28,7 @@ function App() {
     {
       user?(
         <>
-        <NavBar />
+        <NavBar setUser={setUser} user={user} />
         <Routes>
           <Route exact path="/home" element={<Home />}/>
           <Route exact path="/write" element={<AddNews user={user} />}/>

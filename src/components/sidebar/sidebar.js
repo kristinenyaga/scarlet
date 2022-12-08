@@ -22,13 +22,11 @@ export default function SideBar(){
       <div className="sidebarItem">
         <span className="sidebarTitle font-beutify">CATEGORIES</span>
         <ul className="sidebarList">
-          <li className="sidebarListItem">Life</li>
-          <li className="sidebarListItem">Music</li>
+          <li className="sidebarListItem">Business</li>
+          <li className="sidebarListItem">Sports</li>
           <li className="sidebarListItem">
-            style
+            Travel
           </li>
-          <li className="sidebarListItem">Sport</li>
-          <li className="sidebarListItem">Tech</li>
       </ul>
       </div>
 

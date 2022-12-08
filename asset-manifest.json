@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/scarlet/static/css/main.2e2fee10.css",
+    "main.js": "/scarlet/static/js/main.f5b3d741.js",
+    "index.html": "/scarlet/index.html",
+    "main.2e2fee10.css.map": "/scarlet/static/css/main.2e2fee10.css.map",
+    "main.f5b3d741.js.map": "/scarlet/static/js/main.f5b3d741.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e2fee10.css",
+    "static/js/main.f5b3d741.js"
+  ]
+}

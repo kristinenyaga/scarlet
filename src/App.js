@@ -39,8 +39,8 @@ function App() {
 
       ):
       <Routes>
-        <Route exact path="/" element={<LoginTest  setUser={setUser} />}/>
-        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/scarlet" element={<LoginTest  setUser={setUser} />}/>
+        <Route exact path="/scarlet/register" element={<Register />} />
 
       </Routes>
     }

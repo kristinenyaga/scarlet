@@ -25,9 +25,9 @@ function NavBar({user,setUser}) {
         <Container className='display-flex'>
           <Navbar.Brand className='scarlet'>Scarlet</Navbar.Brand>
           <Nav className="me-auto rightside" >
-            <Nav.Link as={Link} to="/home">Home</Nav.Link>
-            <Nav.Link as={Link} to="/write">Add News</Nav.Link>
-            <Nav.Link as={Link} to="/editprofile">ChangeProfile</Nav.Link>
+            <Nav.Link as={Link} to="/scarlet/home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/scarlet/write">Add News</Nav.Link>
+            <Nav.Link as={Link} to="/scarlet/editprofile">ChangeProfile</Nav.Link>
             <button className='logoutBtn' onClick={handleLogoutClick}>
           Logout
         </button>

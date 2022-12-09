@@ -11,7 +11,7 @@ export default function LoginTest({ setUser }) {
     }
     function handleSubmit(e) {
       e.preventDefault();
-      fetch("/login", {
+      fetch("https://news-backend-production-5c64.up.railway.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

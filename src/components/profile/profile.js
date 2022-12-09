@@ -9,7 +9,7 @@ const [email, setEmail] = useState("");
 const [image_url, setImage_Url] = useState("");
 const navigate=useNavigate()
 function handleLogoutClick() {
-  fetch("/logout", { method: "DELETE" }).then((r) => {
+  fetch("https://news-backend-production-5c64.up.railway.app/logout", { method: "DELETE" }).then((r) => {
     if (r.ok) {
       setUser(null);
       navigate("/scarlet")
@@ -18,7 +18,7 @@ function handleLogoutClick() {
 }
   function handleSubmit(e){
     e.preventDefault();
-    fetch(`/users/${user.id}`, {
+    fetch(`https://news-backend-production-5c64.up.railway.app/users/${user.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

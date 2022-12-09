@@ -3,7 +3,7 @@ import "./post.css"
 export default function Post({news,onDelete}){
 
   function handleDelete(id) {
-    fetch(`/articles/${id}`, {
+    fetch(`https://news-backend-production-5c64.up.railway.app/articles/${id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

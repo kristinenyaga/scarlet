@@ -11,7 +11,7 @@ export default function AddNews({user,news,setNews,addArticle}){
   function handleSubmit(e) {
    
     e.preventDefault();
-    fetch("/articles", {
+    fetch("https://news-backend-production-5c64.up.railway.app/articles", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

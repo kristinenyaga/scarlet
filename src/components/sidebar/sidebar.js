@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react'
 export default function SideBar({ categories, selectedCategory, setSelectedCategory }){
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("/users")
+    fetch("https://news-backend-production-5c64.up.railway.app/users")
       .then((r) => r.json())
       .then((users) => {
         setUsers(users);

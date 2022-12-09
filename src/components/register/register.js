@@ -21,7 +21,7 @@ const [isLoading, setIsLoading] = useState(false);
   function handleSubmit(e) {
    
     e.preventDefault();
-    fetch("/users", {
+    fetch("https://news-backend-production-5c64.up.railway.app/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -10,7 +10,7 @@ function NavBar({user,setUser}) {
   const nav = useNavigate();
 
     function handleLogoutClick() {
-      fetch("/logout", { method: "DELETE" }).then((r) => {
+      fetch("https://news-backend-production-5c64.up.railway.app/logout", { method: "DELETE" }).then((r) => {
         if (r.ok) {
           setUser(null);
           nav("/scarlet")

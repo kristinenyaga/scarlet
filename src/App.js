@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     // auto-login
-    fetch("/me").then((r) => {
+    fetch("https://news-backend-production-5c64.up.railway.app/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
@@ -22,7 +22,7 @@ function App() {
   const [news,setNews]=useState([])
   // const [categories,setCategories]=useState([])
   useEffect(() => {
-    fetch("/articles")
+    fetch("https://news-backend-production-5c64.up.railway.app/articles")
       .then((r) => r.json())
       .then((news) => {
         setNews(news);

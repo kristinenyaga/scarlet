@@ -1,6 +1,6 @@
 import "./addnews.css"
 import { useState } from "react";
-export default function AddNews({user}){
+export default function AddNews({user,news,setNews,addArticle}){
   const [category, setCategory] = useState("");
   const [rating, setRating] = useState("");
   const [content, setContent] = useState("");
@@ -27,7 +27,7 @@ export default function AddNews({user}){
     }).then((r) => {
       if (r.ok) {
         r.json().then((article) => {
-          console.log(article)
+          addArticle(article)
           clearData()
         });
       } else {
@@ -50,7 +50,7 @@ export default function AddNews({user}){
       <h1>Add News</h1>
       <form action="/" onSubmit={handleSubmit}>
         <div className="info">
-          <input class="fname" type="text" name="name" placeholder="Full name" value={user.firstname}/>
+          <input  type="text" name="name" placeholder="Full name" value={user.firstname}/>
           <input type="text" className="email" placeholder="Email" value={user.email}/>
           <input type="text" name="title" placeholder="Title"
            value={title}

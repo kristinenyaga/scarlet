@@ -13,7 +13,7 @@ function NavBar({user,setUser}) {
       fetch("/logout", { method: "DELETE" }).then((r) => {
         if (r.ok) {
           setUser(null);
-          nav("/")
+          nav("/scarlet")
         }
       });
     }

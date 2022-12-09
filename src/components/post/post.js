@@ -1,6 +1,16 @@
 import "./post.css"
 
-export default function Post({news}){
+export default function Post({news,onDelete}){
+
+  function handleDelete(id) {
+    fetch(`/articles/${id}`, {
+      method: "DELETE",
+    }).then((r) => {
+      if (r.ok) {
+        onDelete(id);
+      }
+    });
+  }
   return(
    <div className="post">
       <img className="postImg"
@@ -22,6 +32,8 @@ export default function Post({news}){
       <p className="postDesc">
       {news.content}
       </p>
+      <button className="myBtn" onClick={()=>handleDelete(news.id)}>remove</button>
+
       <h2 className="posttitle">written by...</h2>
       <div className="displayflex">
         <img className="imagepost"

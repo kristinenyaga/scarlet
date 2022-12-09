@@ -19,6 +19,20 @@ function App() {
       }
     });
   }, []);
+  const [news,setNews]=useState([])
+  // const [categories,setCategories]=useState([])
+  useEffect(() => {
+    fetch("/articles")
+      .then((r) => r.json())
+      .then((news) => {
+        setNews(news);
+      });
+  }, []);
+
+  function handleAddNews(newNews) {
+    const updatedNews = [...news, newNews];
+    setNews(updatedNews);
+  }
 
 
   return (
@@ -30,9 +44,9 @@ function App() {
         <>
         <NavBar setUser={setUser} user={user} />
         <Routes>
-          <Route exact path="/home" element={<Home />}/>
-          <Route exact path="/write" element={<AddNews user={user} />}/>
-          <Route exact path="/editprofile" element={<Profile user={user} />}/>
+          <Route exact path="/home" element={<Home news={news} setNews={setNews} />}/>
+          <Route exact path="/write" element={<AddNews user={user} news={news} setNews={setNews} addArticle={handleAddNews} />}/>
+          <Route exact path="/editprofile" element={<Profile user={user} setUser={setUser} />}/>
         </Routes>
         </>
        

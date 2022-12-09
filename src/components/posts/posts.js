@@ -2,21 +2,22 @@ import Post from "../post/post"
 import "./posts.css"
 import { useEffect,useState } from "react";
 
-export default function Posts(){
-  const [news, setNews] = useState([]);
+export default function Posts({news,selectedCategory,setNews}){
 
-  useEffect(() => {
-    fetch("/articles")
-      .then((r) => r.json())
-      .then((news) => {
-        setNews(news);
-      });
-  }, []);
+  const displayedArticles = news.filter(
+    (article) => selectedCategory === "All" || article.category === selectedCategory
+  );
+
+  function onDelete(id){
+    console.log(id)
+    const updatedNews = news.filter((mynews) => mynews.id !== id);
+    setNews(updatedNews);
+  }
   return(
    <>
     <div className="posts">
-      {news.map((news) => (
-          <Post key={news.id} news={news} />
+      {displayedArticles.map((news) => (
+          <Post key={news.id} news={news} onDelete={onDelete} />
         ))}
 
 

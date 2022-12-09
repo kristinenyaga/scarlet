@@ -21,8 +21,7 @@
   margin: 10px;
   padding: 5px;
   width: 80%;
-  border-top: 1px solid #a7a4a4;
-  border-bottom: 1px solid #a7a4a4;
+ 
   color: #222;
   line-height: 20px;
   text-align: center;
@@ -69,3 +68,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.myBtn{
+  width: 80px;
+}

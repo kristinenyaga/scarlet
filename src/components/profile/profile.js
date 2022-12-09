@@ -1,14 +1,24 @@
 import "./profile.css"
+import { useNavigate } from "react-router-dom"
 import { useState } from "react";
 
-export default function Profile({user}){
+export default function Profile({user,setUser}){
  const [firstname, setFirstname] = useState("");
 const [lastname, setLastname] = useState("");
 const [email, setEmail] = useState("");
 const [image_url, setImage_Url] = useState("");
+const navigate=useNavigate()
+function handleLogoutClick() {
+  fetch("/logout", { method: "DELETE" }).then((r) => {
+    if (r.ok) {
+      setUser(null);
+      navigate("/scarlet")
+    }
+  });
+}
   function handleSubmit(e){
     e.preventDefault();
-    fetch(`/users/{user.id}`, {
+    fetch(`/users/${user.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -22,6 +32,10 @@ const [image_url, setImage_Url] = useState("");
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
+          alert("you have to login again")
+          setUser(null)
+          handleLogoutClick()
+          navigate("/scarlet")
         });
       } else {
         r.json().then((err) => alert(err.errors));
@@ -34,7 +48,7 @@ const [image_url, setImage_Url] = useState("");
         <div className="settingsWrapper">
             <div className="settingsTitle">
               <h2 className="settingsUpdateTitle">Update Your Account</h2>
-              <span className="settingsDeleteTitle">Delete Your Account</span>
+              <span className="settingsDeleteTitle">you must provide all the details</span>
 
             </div>
             <form className="settingsForm" onSubmit={handleSubmit}>
@@ -54,7 +68,9 @@ const [image_url, setImage_Url] = useState("");
                value={lastname}
                onChange={(e) => setLastname(e.target.value)}></input>
               <label>Email</label>
-              <input type="email"></input>
+              <input type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}></input>
               <label>image_url</label>
               <input type="image_url"
                value={image_url}

@@ -39,7 +39,7 @@ const [isLoading, setIsLoading] = useState(false);
       setIsLoading(false);
       if (r.ok) {
         r.json().then((user) => {
-          navigate("/")
+          navigate("/scarlet")
         });
       } else {
         r.json().then((err) => alert(err.errors));

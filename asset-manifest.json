@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/scarlet/static/css/main.4d7a9dfb.css",
-    "main.js": "/scarlet/static/js/main.5170e573.js",
+    "main.js": "/scarlet/static/js/main.0501f376.js",
     "index.html": "/scarlet/index.html",
     "main.4d7a9dfb.css.map": "/scarlet/static/css/main.4d7a9dfb.css.map",
-    "main.5170e573.js.map": "/scarlet/static/js/main.5170e573.js.map"
+    "main.0501f376.js.map": "/scarlet/static/js/main.0501f376.js.map"
   },
   "entrypoints": [
     "static/css/main.4d7a9dfb.css",
-    "static/js/main.5170e573.js"
+    "static/js/main.0501f376.js"
   ]
 }

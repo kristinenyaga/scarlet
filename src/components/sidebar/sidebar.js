@@ -1,8 +1,7 @@
 import "./sidebar.css"
 import {useState,useEffect} from 'react'
-export default function SideBar(){
+export default function SideBar({ categories, selectedCategory, setSelectedCategory }){
   const [users, setUsers] = useState([]);
-
   useEffect(() => {
     fetch("/users")
       .then((r) => r.json())
@@ -20,13 +19,12 @@ export default function SideBar(){
         <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem</p> */}
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTitle font-beutify">CATEGORIES</span>
+        <span className="sidebarTitle font-beutify">CHOOSE CATEGORY</span>
         <ul className="sidebarList">
-          <li className="sidebarListItem">Business</li>
-          <li className="sidebarListItem">Sports</li>
-          <li className="sidebarListItem">
-            Travel
-          </li>
+          {categories.map((category)=>(
+            <li className='sidebarListItem'key={category}
+            onClick={() => setSelectedCategory(category)}>{category}</li>
+          ))}
       </ul>
       </div>
 

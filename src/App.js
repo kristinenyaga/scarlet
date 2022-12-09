@@ -11,14 +11,20 @@ import AddNews from './components/addnews/addnews';
 function App() {
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
+  useEffect(()=>{
     // auto-login
-    fetch("https://news-backend-production-5c64.up.railway.app/me").then((r) => {
+    fetch("https://news-backend-production-5c64.up.railway.app/me", {
+      method:'GET',
+      headers: {
+        "Access-Control-Allow-Origin":"no-cors",
+        "Content-Type": "application/json"
+      }
+    }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
     });
-  }, []);
+  },[])
   const [news,setNews]=useState([])
   // const [categories,setCategories]=useState([])
   useEffect(() => {

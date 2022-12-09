@@ -8,11 +8,18 @@ import { useNavigate } from "react-router-dom";
 
 function NavBar({user,setUser}) {
   const nav = useNavigate();
-
+    console.log(user)
     function handleLogoutClick() {
-      fetch("https://news-backend-production-5c64.up.railway.app/logout", { method: "DELETE" }).then((r) => {
+      fetch("https://news-backend-production-5c64.up.railway.app/logout", { 
+        method: "DELETE",
+        headers: {
+          "Access-Control-Allow-Origin":"no-cors",
+          "Content-Type": "application/json",
+        } 
+       }).then((r) => {
         if (r.ok) {
-          setUser(null);
+          // setUser(null);
+          setUser(null)
           nav("/scarlet")
         }
       });

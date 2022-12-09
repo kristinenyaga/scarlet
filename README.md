@@ -6,6 +6,7 @@ __designed by__
 
 - [Table Of Contents](#table-of-contents)
 - [Description](#description)
+- [Backend](#BACKEND-DEPLOYMENT)
 - [Installation](#installation)
 - [Technology Used](#technology-used)
 - [Languages Used](#languages-used)
@@ -18,6 +19,13 @@ __designed by__
 ## Description
 ___
 ThiS is a news application that lets you get access to whats going on currently in kenya and outside the world. The app incorporates a login and a sign up feature where you have to login to gain access into the app.Once logged in you are able to view the current users of the app,as well as the news they posted.A user is also able to add news themselves and also update their profile.
+
+
+## BACKEND-DEPLOYMENT
+
+[backend-deployment](https://news-backend-production-5c64.up.railway.app)
+
+[backend-repo](https://github.com/kristinenyaga/Scarlet-backend)
  ## Installation
  ___
 Requirements
@@ -53,7 +61,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
 
 
 ## Licence

@@ -40,7 +40,7 @@ function App() {
       ):
       <Routes>
         <Route exact path="/scarlet" element={<LoginTest  setUser={setUser} />}/>
-        <Route exact path="/scarlet/register" element={<Register />} />
+        <Route exact path="/register" element={<Register />} />
 
       </Routes>
     }
